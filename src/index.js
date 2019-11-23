@@ -6,13 +6,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import messages_ja from "./translations/ja.json";
 import messages_en from "./translations/en.json";
+import "./bulmaswatch.min.css";
 
 const messages = {
   'ja': messages_ja,
   'en': messages_en
 };
 
-const language = navigator.language.split(/[-_]/)[0];  // language without region code
+const lang = navigator.language.split(/[-_]/)[0];  // language without region code
+const language = lang === 'ja' ? lang : 'en'
 
 ReactDOM.render(
   <IntlProvider locale={language} messages={messages[language]}><App/></IntlProvider>,

@@ -1,3 +1,11 @@
 {
-  "help.text": "Help"
+  "howto.title": "How to",
+  "howto.ingress0": "Tab the upper left area of the screen.",
+  "howto.ingress1": "Tab the upper right icon and copy your agent status into clip board.",
+  "howto.ingress2": "Read the term of use and click confirm if you agree.",
+  "howto.ingress3": "Long tap here in the tool and select paste.",
+  "howto.ingress4": "Click the register button to submit your start record. Once you complete the activity, you need to repeat the same operation to record your end record.",
+  "next": "Next",
+  "prev": "Previous",
+  "close": "Close"
 }

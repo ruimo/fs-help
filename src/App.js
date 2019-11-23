@@ -1,19 +1,29 @@
 import React, {Component} from 'react';
 import {
-  BrowserRouter as Router,
-  Route
+  Link,
+  Route,
+  HashRouter as Router
 } from 'react-router-dom';
 import './App.css';
 import HowTo from "./HowTo";
 import {FormattedMessage} from 'react-intl';
+import "@fortawesome/fontawesome-free/js/all.min.js";
 
 class App extends Component {
   render() {
+    const top = () => {
+      return (
+        <Link to="/howto"><FormattedMessage id="howto.title"/></Link>
+      );
+    };
+
     return (
-      <Router>
-        <FormattedMessage id="help.text"/>
-        <Route path="/howto" exact render={() => <HowTo/>}/>
-      </Router>
+      <div>
+        <Router>
+          <Route exact path="/" render={top}/>
+          <Route exact path="/howto" render={() => <HowTo/>}/>
+        </Router>
+      </div>
     );
   }
 }
